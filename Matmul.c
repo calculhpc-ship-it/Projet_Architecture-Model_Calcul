@@ -49,7 +49,7 @@ int main(void)
 {
     int M = 4;
     int K = 4;
-    int N = 32;   // N doit etre multiple de 16 pour AVX-512
+    int N = 16;   // N doit etre multiple de 16 pour AVX-512
 
     float *A = malloc(M * K * sizeof(float));
     float *B = malloc(K * N * sizeof(float));

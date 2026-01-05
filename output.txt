@@ -1,0 +1,20 @@
+(base) galyleo@massine-HP-Laptop-15s-eq0xxx:~/Documents/M1CHPS/Architecture_Model_Calcul/Projet_SIMD_AVX512$ gcc -O3 -mavx512f Matmul.c -o ./Matmul
+
+(base) galyleo@massine-HP-Laptop-15s-eq0xxx:~/Documents/M1CHPS/Architecture_Model_Calcul/Projet_SIMD_AVX512$ sde64 -icl -- ./Matmul
+
+Resultat C (naïve):
+50.000000 32.000000 42.000000 31.000000 41.000000 37.000000 47.000000 50.000000 32.000000 42.000000 31.000000 41.000000 37.000000 47.000000 50.000000 32.000000
+
+Resultat C (AVX-512):
+50.000000 32.000000 42.000000 31.000000 41.000000 37.000000 47.000000 50.000000 32.000000 42.000000 31.000000 41.000000 37.000000 47.000000 50.000000 32.000000
+
+(base) galyleo@massine-HP-Laptop-15s-eq0xxx:~/Documents/M1CHPS/Architecture_Model_Calcul/Projet_SIMD_AVX512$ mpirun -n 5 --oversubscribe python3 ./parallel_pi.py
+
+Server démarrage avec 4 clients
+[SERVER] t= 2.83s | src=2 | N=10000000  | pi≈3.141322800 | err≈3.16e-04
+[SERVER] t= 5.88s | src=2 | N=50000000  | pi≈3.141431520 | err≈1.41e-04
+[SERVER] t= 8.60s | src=2 | N=90000000  | pi≈3.141505644 | err≈1.05e-04
+[SERVER] t= 9.91s | src=4 | N=120000000 | pi≈3.141540433 | err≈9.13e-05
+[SERVER] t=11.84s | src=2 | N=130000000 | pi≈3.141580646 | err≈8.77e-05
+[SERVER] FIN : pi≈3.141580646, N=130000000
+[CLIENT 2] Arrêt après 4 paquets

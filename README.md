@@ -1,7 +1,6 @@
            Mamadou Galy Diallo
         ==M1 CHPS-UPVD-2025/2026==
 
-===============================================================
 ==//Projet Architecture & Model de Calcul//==
 
 ==>Partie 1: Multiplication de matrices en C avec AVX-512
@@ -18,4 +17,3 @@
 
 ==Commande execution (alternative utiliser de mon pc)/problem performance de pc.
 1. mpirun -n 5 --oversubscribe python3 ./parallel_pi.py
-===============================================================
