@@ -9,7 +9,7 @@
 --Rendu fichier code: Matmul.c 
 
 ==Commande execution
-1. gcc -O3 -mavx512f ./Matmul.c
+1. gcc -O3 -mavx512f Matmul.c -o ./Matmul
 2. sde64 -icl -- ./Matmul
 
 ==>Partie 2: Calcul de π par méthode stochastique
